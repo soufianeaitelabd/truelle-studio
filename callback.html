@@ -1,0 +1,10 @@
+<!doctype html><html lang="fr"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1"><meta name="referrer" content="no-referrer"><title>Autorisation</title><style>body{font-family:Georgia,serif;max-width:680px;margin:40px auto;padding:0 16px;line-height:1.6;color:#222;background:#fbf8f2}h1{font-size:1.8em}a{color:#7a1f2b}code{background:#eee;padding:2px 6px;word-break:break-all}</style></head><body>
+<h1>Autorisation TikTok</h1>
+<p id="msg">Lecture du code…</p>
+<p><code id="code"></code></p>
+<script>
+var p=new URLSearchParams(location.search),c=p.get('code'),e=p.get('error');
+document.getElementById('msg').textContent=c?"Copie ce code et colle-le à Claude :":(e?"Erreur : "+e+" "+(p.get('error_description')||""):"Aucun code reçu.");
+if(c)document.getElementById('code').textContent=c;
+</script>
+</body></html>
